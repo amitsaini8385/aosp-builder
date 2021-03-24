@@ -17,10 +17,10 @@ make api-stubs-docs || echo no problem
 make hiddenapi-lists-docs || echo no problem
 make system-api-stubs-docs || echo no problem
 make test-api-stubs-docs || echo no problem
-make bacon -j8 &
-sleep 100m
-kill $(pidof soong_ui)
-kill $(pidof make)
+make bacon -j10 &
+sleep 85m
+kill %1
+ccache -s
 #and dont use below codes for first 1 or 2 times, to get ccache uploaded,
 
 
